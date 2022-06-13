@@ -9,14 +9,14 @@ type Square struct {
 	a     uint
 }
 
-func (s Square) End() Point {
+func (s *Square) End() Point {
 	return Point{s.start.x + int(s.a), s.start.y - int(s.a)}
 }
 
-func (s Square) Area() uint {
+func (s *Square) Area() uint {
 	return s.a * s.a
 }
 
-func (s Square) Perimeter() uint {
+func (s *Square) Perimeter() uint {
 	return 4 * s.a
 }
